@@ -43,5 +43,6 @@ ssh-add -D     -> removes all key from ssh-add (manager)
 
 ssh-add -d .ssh/id_rsa_pmanimanu88 ->removes one specific key
 
+ssh-add -l (shows all PRIVATE_KEY)
 ssh-add -d PRIVATE_KEY (remove PRIVATE_KEY)
 ssh-add PRIVATE_KEY (add PRIVATE_KEY)
