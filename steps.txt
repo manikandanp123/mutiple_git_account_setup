@@ -1,0 +1,26 @@
+1. ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
+    /Users/yourname/.ssh/id_rsa_github_account1
+
+2. eval "$(ssh-agent -s)"
+
+3. ssh-add ~/.ssh/id_rsa_github_account1
+
+4. copy ~/.ssh/id_rsa_github_account1.pub - this token and paste in github account.
+
+5. vi ~/.ssh/config
+
+6. Host github.com-account1
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_github_account1
+    IdentitiesOnly yes
+
+7.  git config --global user.name "Your Name"
+    git config --global user.email "your-email@example.com"
+
+8. ssh -T git@github.com-account1
+
+9. shows list of ssh keys generated
+    ssh-add -l
+
+10. ssh-add ~/.ssh/id_rsa_github_account1
