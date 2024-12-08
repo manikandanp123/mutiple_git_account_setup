@@ -3,6 +3,8 @@
 
 2. eval "$(ssh-agent -s)"
 
+
+(adding private key to ssh-add (i.e ssh manager))
 3. ssh-add ~/.ssh/id_rsa_github_account1
 
 4. copy ~/.ssh/id_rsa_github_account1.pub - this token and paste in github account.
@@ -27,3 +29,19 @@
 
 
 While cloning from github - git remote set-url origin git@github.com:manikandanp123/mutiple_git_account_setup.git
+
+
+
+Most Important
+
+* when doing git clone or push to specific repo,then only one private key need to be there in ssh-add 
+
+* other private key need to be removed by this command 
+
+
+ssh-add -D     -> removes all key from ssh-add (manager)
+
+ssh-add -d .ssh/id_rsa_pmanimanu88 ->removes one specific key
+
+ssh-add -d PRIVATE_KEY (remove PRIVATE_KEY)
+ssh-add PRIVATE_KEY (add PRIVATE_KEY)
