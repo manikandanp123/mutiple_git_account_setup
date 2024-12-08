@@ -24,3 +24,6 @@
     ssh-add -l
 
 10. ssh-add ~/.ssh/id_rsa_github_account1
+
+
+While cloning from github - git remote set-url origin git@github.com:manikandanp123/mutiple_git_account_setup.git
